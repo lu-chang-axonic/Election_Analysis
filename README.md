@@ -5,68 +5,25 @@ The purpose of this project is to summarize the number of votes by county and by
 
 ## Election Audit Results
 
-#### Stock Performance Comparison Between 2017 and 2018
-
 * There are  369,711 votes that were cast in this congressional election. 
 * There are three counties in this election. They are Jefferson with 38,855 votes (10.51%), Denver with 306,055 votes (82.78%), and Arapahoe with 24,801 votes (6.71%).
 * Denver Had the largest number of votes.
 * There are three candndiates in the election. They are Charles Casper Stockham with 85,213 votes (23.0%), Diana DeGette with 272,892 votes (73.8%), and Raymon Anthony Doane with 11,606 votes (3.1%).
 * Diana DeGette won the election.  She got 272,892 votes, which was 73.8% of the total votes. 
 
+The screenshot below shows the above results as how they printed in the terminal. 
 ![](https://github.com/lu-chang-axonic/Election_Analysis/blob/main/Results%20Printed%20to%20the%20Terminal.PNG)
 
-#### Execution Time Comparison
-The two message boxes below how the run time of the analysis was before the refactoring, saved in fiel "VBA_Challenge" :
-![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/VBA_Challenge_2017.PNG)
-![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/VBA_Challenge_2018.PNG)
+## Election Audit Summary
+This script can be repuposed for other elections. Two examples:
+1. For election audit summarize other parameters such as gender, race, or education, etc, the code below can be modified to navigate to the desired parameter (be it a string or a numerical value) to conduct similar summary of results.
+    # For each row in the CSV file.
+    for row in reader:
 
-The two message boxes below how the run time of the analysis was after the refactoring by using an Index, saved in "VBA_Challenge Using Index:
+        # Add to the total vote count
+        total_votes = total_votes + 1
 
-![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/Enhanced%20Run%20Time%202017.PNG)
-![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/Enhanced%20Run%20Time%202018.PNG)
-
-So, the performance of the code was improved after the refactoring, as reflected by the reduced execution time. The array and nested loop has made the collection of information very efficient (shown below). 
-
-   
-        For i = 2 To RowCount
-        '3a) Increase volume for current ticker
-        If Cells(i, 1).Value = tickers(tickerIndex) Then
-        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+        # Get the candidate name from each row.
+        candidate_name = row[2]
         
-        'If Cells(i, 1).Value = tickers(tickerIndex) Then
-        'TotalVolume = TotalVolume + Cells(i, 8).Value
-        
-        End If
-        
-        '3b) Check if the current row is the first row with the selected tickerIndex.
-        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
-        tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-        End If
-        
-        '3c) check if the current row is the last row with the selected ticker
-         'If the next row’s ticker doesn’t match, increase the tickerIndex.
-         If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
-         tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
-         tickerIndex = tickerIndex + 1
-         End If
-          
-            '3d Increase the tickerIndex.
-         Next i
-         
-             
-    
-## Summary
-#### What are the advantages or disadvantages of refactoring code?
-###### Advantages
-1. It is a very efficient way to reuse code, so that one does not need to write code line by line. 
-2. The previous code is proven to be working. This saves debug time too.
-3. It is great way to learn for beginner programmers. 
-
-###### Disadvantages
-1. Without writing the code from scratch, the programmer could have easily missed nuances that could cause problems down the road.
-2. If the new problem is not identical to the old problem, the refactoring could ended up consuming more time than writing from scratch.
-3. It is an easy way to learn, but the learned knowledge may not be solidly yours because everything is already pre-written.
-
-#### How do these pros and cons apply to refactoring the original VBA script?
-In doing this challenge, I found myself following the question and the original VBA scripts really easily and finished the project very quickly. However, I am not sure if being given a different problem, I would be able to write the script without referring back the sample repeatedly as I do not remember the codes in details.
-
+2. For other analysis, such as finding 
