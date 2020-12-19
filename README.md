@@ -7,7 +7,11 @@ The purpose of this project is to summarize the number of votes by county and by
 
 #### Stock Performance Comparison Between 2017 and 2018
 
-* There are  
+* There are  369,711 votes that were cast in this congressional election. 
+* There are three counties in this election. They are Jefferson with 38,855 votes (10.51%), Denver with 306,055 votes (82.78%), and Arapahoe with 24,801 votes (6.71%).
+* Denver Had the largest number of votes.
+* There are three candndiates in the election. They are Charles Casper Stockham with 85,213 votes (23.0%), Diana DeGette with 272,892 votes (73.8%), and Raymon Anthony Doane with 11,606 votes (3.1%).
+* Diana DeGette won the election.  She got 272,892 votes, which was 73.8% of the total votes. 
 
 ![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/2017%20Result%20for%20Stock%20Analysis.png)
 ![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/2018%20Result%20for%20Stock%20Analysis.png)
