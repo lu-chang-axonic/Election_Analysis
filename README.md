@@ -13,10 +13,7 @@ The purpose of this project is to summarize the number of votes by county and by
 * There are three candndiates in the election. They are Charles Casper Stockham with 85,213 votes (23.0%), Diana DeGette with 272,892 votes (73.8%), and Raymon Anthony Doane with 11,606 votes (3.1%).
 * Diana DeGette won the election.  She got 272,892 votes, which was 73.8% of the total votes. 
 
-![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/2017%20Result%20for%20Stock%20Analysis.png)
-![](https://github.com/lu-chang-axonic/stock-analysis/blob/main/images/2018%20Result%20for%20Stock%20Analysis.png)
-
-The color coded result made it easy to identify that 2017 was a better year of performance for the stocks under discussion. 
+![](https://github.com/lu-chang-axonic/Election_Analysis/blob/main/Results%20Printed%20to%20the%20Terminal.PNG)
 
 #### Execution Time Comparison
 The two message boxes below how the run time of the analysis was before the refactoring, saved in fiel "VBA_Challenge" :
