@@ -28,7 +28,7 @@ with open (file_to_load) as election_data:
         candidate_votes[candidate_name]+=1
 
 with open(file_to_save,"w") as txt_file:
-    election_results=(f"Election Results\n-----------------------\nTotal Votes: {total_votes:,d}\n-----------------------\n")
+    election_results=(f"Election Results\n-------------------------\nTotal Votes: {total_votes:,d}\n-------------------------\n\n")
     print (election_results, end="")
     txt_file.write(election_results)
  
@@ -36,13 +36,13 @@ with open(file_to_save,"w") as txt_file:
         #this is just to shortern the votes, which was defined upstairs
         votes=candidate_votes[candidate_name]
         vote_percentage=float(votes)/float(total_votes)*100
-        candidate_results=(f"{candidate_name}: received {vote_percentage:.2f}% of the vote.\n")
+        candidate_results=(f"{candidate_name}: {vote_percentage:.2f}% ({votes:,d})\n\n")
         txt_file.write(candidate_results)
 
         if (votes>winning_count):
             winning_count=votes
             winning_candidate=candidate_name
             winning_percentage=vote_percentage
-    winning_result=(f"The winning candidate is {winning_candidate}. The winning vote is {winning_count:,d}. The winning percentage is {winning_percentage:.2f}%.")
+    winning_result=(f"-------------------------\nWinner: {winning_candidate}\nWinning Vote Count: {winning_count:,d}\nWinning Percentage: {winning_percentage:.2f}%.\n-------------------------")
     txt_file.write(winning_result)       
 
