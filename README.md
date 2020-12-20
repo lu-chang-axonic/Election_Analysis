@@ -17,7 +17,7 @@ The screenshot below shows the above results as how they printed in the terminal
 ## Election Audit Summary
 This script can be repurposed for other election analysis. Two examples:
 1. For election audit summarize other parameters such as gender, race, or education, etc, the code below can be modified to navigate to the desired parameter (be it a string or a numerical value) to conduct similar summary of results.
-    # For each row in the CSV file.
+
     for row in reader:
 
         # Add to the total vote count
@@ -28,7 +28,7 @@ This script can be repurposed for other election analysis. Two examples:
         
 2. For other analysis, such as finding what % of each candidate's votes was from each county, the code below can be modified by replacing the total number of votes in the denominator to the number of votes in each county.
 
-    # Save the final candidate vote count to the text file.
+    
     for candidate_name in candidate_votes:
 
         # Retrieve vote count and percentage
